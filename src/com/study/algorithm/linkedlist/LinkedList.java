@@ -3,7 +3,7 @@ package com.study.algorithm.linkedlist;
 /**
  * @author yjx
  * @date 2020/5/24
- * @description 无虚拟头结点
+ * @description 头插法  无虚拟头结点
  */
 public class LinkedList<E> {
 
@@ -112,17 +112,5 @@ public class LinkedList<E> {
             this.value = value;
         }
     }
-
-    public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        for (int i = 0; i < 10; i++) {
-            list.addFirst(i);
-        }
-        list.addFirst(null);
-
-        System.out.println(list.indexOf(null));
-
-    }
-
 
 }

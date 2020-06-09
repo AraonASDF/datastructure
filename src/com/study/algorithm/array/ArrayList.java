@@ -46,7 +46,10 @@ public class ArrayList<E> {
         if (size == data.length) {
             resize(size + 1);
         }
-        System.arraycopy(data, index, data, index + 1, size - index);
+
+        if (size - index > 0) {
+            System.arraycopy(data, index, data, index + 1, size - index);
+        }
         data[index] = e;
         size++;
         return true;

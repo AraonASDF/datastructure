@@ -34,6 +34,7 @@ public class ArrayDeque<E> {
             return null;
         }
         E res = (E) data[head];
+        data[head] = null;
         head = (head + 1) % data.length;
         size--;
         return res;
@@ -81,20 +82,5 @@ public class ArrayDeque<E> {
         res.append("] tail");
         return res.toString();
     }
-
-    public static void main(String[] args) {
-
-        ArrayDeque<Integer> queue = new ArrayDeque<>();
-        for (int i = 0; i < 20; i++) {
-            queue.offer(i);
-            System.out.println(queue);
-
-            if (i % 3 == 2) {
-                queue.poll();
-                System.out.println(queue);
-            }
-        }
-    }
-
 
 }

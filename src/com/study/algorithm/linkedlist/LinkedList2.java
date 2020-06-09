@@ -5,7 +5,7 @@ import com.study.algorithm.linkedlist.LinkedList.Node;
 /**
  * @author yjx
  * @date 2020/5/24 0024 20:50
- * @description 虚拟头结点
+ * @description 头插法  虚拟头结点
  */
 public class LinkedList2<E> {
 
@@ -71,6 +71,5 @@ public class LinkedList2<E> {
         }
         return false;
     }
-
 
 }
