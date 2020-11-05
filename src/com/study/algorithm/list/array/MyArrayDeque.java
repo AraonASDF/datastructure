@@ -40,7 +40,7 @@ public class MyArrayDeque<E> implements Deque<E> {
         if (e == null) {
             throw new NullPointerException();
         }
-        data[(head = (head - 1) & data.length - 1)] = e;
+        data[(head = (head - 1) & (data.length - 1))] = e;
         if (head == tail) {
             doubleCapacity();
         }
@@ -83,7 +83,7 @@ public class MyArrayDeque<E> implements Deque<E> {
             return null;
         }
         data[head] = null;
-        head = (head + 1) & data.length - 1;
+        head = (head + 1) & (data.length - 1);
         return res;
     }
 
@@ -94,7 +94,7 @@ public class MyArrayDeque<E> implements Deque<E> {
 
     @Override
     public E pollLast() {
-        int t = (tail - 1) & data.length - 1;
+        int t = (tail - 1) & (data.length - 1);
         E res = elementData(t);
         if (res == null) {
             return null;
@@ -111,6 +111,6 @@ public class MyArrayDeque<E> implements Deque<E> {
 
     @Override
     public E peekLast() {
-        return elementData((tail - 1) & data.length - 1);
+        return elementData((tail - 1) & (data.length - 1));
     }
 }

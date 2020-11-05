@@ -118,5 +118,4 @@ public class MyArrayList<E> {
         }
         this.data = Arrays.copyOf(data, newCapacity);
     }
-
 }

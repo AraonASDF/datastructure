@@ -168,5 +168,4 @@ public class MyLinkedList<E> {
             this.e = e;
         }
     }
-
 }
